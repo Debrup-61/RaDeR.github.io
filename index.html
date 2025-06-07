@@ -32,7 +32,6 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/RaDeR_datageneration.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -128,11 +127,33 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Tool-augmented Large Language Models (TALMs) are known to enhance the skillset of large language models (LLMs), thereby, leading to their improved reasoning abilities across many tasks. While, TALMs have been successfully employed in different question-answering benchmarks, their efficacy on complex mathematical reasoning benchmarks, and the potential complementary benefits offered by tools for knowledge retrieval and mathematical equation solving are open research questions. In this work, we present MathSensei, a tool-augmented large language model for mathematical reasoning. We study the complementary benefits of the tools - knowledge retriever (Bing Web Search), program generator + executor (Python), and symbolic equation solver (Wolfram-Alpha API) through evaluations on mathematical reasoning datasets. We perform exhaustive ablations on MATH, a popular dataset for evaluating mathematical reasoning on diverse mathematical disciplines. We also conduct experiments involving well-known tool planners to study the impact of tool sequencing on the model performance. 
+             We propose RaDeR, a set of reasoning-based
+dense retrieval models trained with data derived
+from mathematical problem solving using large
+language models (LLMs). Our method lever-
+ages retrieval-augmented reasoning trajectories
+of an LLM and self-reflective relevance evalua-
+tion, enabling the creation of both diverse and
+hard-negative samples for reasoning-intensive
+relevance. RaDeR retrievers, trained for math-
+ematical reasoning, effectively generalize to
+diverse reasoning tasks in the BRIGHT and
+RAR-b benchmarks, consistently outperform-
+ing strong baselines in overall performance.
+Notably, RaDeR achieves significantly higher
+performance than baselines on the Math and
+Coding splits. In addition, RaDeR presents
+the first dense retriever that outperforms BM25
+when queries are Chain-of-Thought reason-
+ing steps, underscoring the critical role of
+reasoning-based retrieval to augment reason-
+ing language models. Furthermore, RaDeR
+achieves comparable or superior performance
+while using only 2.5% of the training data used
+by the concurrent work REASONIR, highlight-
+ing the quality of our synthesized training data.
           </p>
-          <p>
-            MathSensei achieves 13.5% better accuracy over gpt-3.5-turbo with Chain-of-Thought on the MATH dataset. We further observe that TALMs are not as effective for simpler math word problems (in GSM-8K), and the benefit increases as the complexity and required knowledge increases (progressively over AQuA, MMLU-Math, and higher level complex questions in MATH).
-          </p>
+
         </div>
       </div>
     </div>
@@ -160,14 +181,15 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{Das:2024:MathSensei,
-      title={MATHSENSEI: A Tool-Augmented Large Language Model for Mathematical Reasoning}, 
-      author={Debrup Das and Debopriyo Banerjee and Somak Aditya and Ashish Kulkarni},
-      year={2024},
-      eprint={2402.17231},
+    <pre><code>@misc{das2025raderreasoningawaredenseretrieval,
+      title={RaDeR: Reasoning-aware Dense Retrieval Models}, 
+      author={Debrup Das and Sam O' Nuallain and Razieh Rahimi},
+      year={2025},
+      eprint={2505.18405},
       archivePrefix={arXiv},
-      primaryClass={cs.CL}
-    }
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.18405}, 
+}
   </code></pre>
   </div>
 </section>
