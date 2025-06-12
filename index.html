@@ -126,16 +126,22 @@
         
         <!-- Left Column: Image -->
         <div class="column is-half has-text-centered">
-          <img id="teaser" style="max-width: 100%; height: auto;" src="./static/images/RaDeR_datageneration.png" alt="RaDeR Data Generation">
-        </div>
+          <figure class="image">
+            <img id="teaser" style="width: 600px; height: auto;" src="./static/images/RaDeR_datageneration.png" alt="RaDeR Data Generation">
+            <figcaption class="has-text-grey is-size-6 mt-2">
+              <em>An overview of the RaDeR data generation pipeline. The OST action stands for one step thought generation, and CRS stands for complete remaining solution steps action.</em>
+            </figcaption>
+          </figure>
+      </div>
 
         <!-- Right Column: Takeaways -->
         <div class="column is-half">
-          <h2 class="subtitle has-text-centered mb-4">
-           We propose <span class="has-text-weight-bold">RaDeR</span>, a set of reasoning-based dense retrieval models trained with data derived from mathematical problem solving using retrieval-augmented reasoning trajectories of LLMs. 
-          </h2>
-
+          
           <!-- Takeaway Boxes -->
+          <div class="box has-background-light">
+            <p> We propose <span class="has-text-weight-bold">RaDeR</span>, a set of reasoning-based dense retrieval models trained with data derived from mathematical problem solving using retrieval-augmented reasoning trajectories of LLMs.</p>
+          </div>
+          
           <div class="box has-background-light">
             <p><strong>🔍 </strong> Our method leverages Monte Carlo Tree Search 🌲 (MCTS)  for exploring the space of retrieval-augmented reasoning trajectories and self-reflective retrieval relevance evaluation 🤔 for enabling the creation of both diverse and hard-negative samples for reasoning retrieval training. </p>
           </div>
