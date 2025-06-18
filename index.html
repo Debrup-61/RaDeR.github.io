@@ -7,7 +7,25 @@
   <meta name="keywords" content="Information Retrieval, Reasoning-based retriever, retrieval-augmnted search, math reasoning, MCTS">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RaDeR: Reasoning-aware Dense Retrieval Models</title>
-
+  <style>
+    .box-bright-red {
+      background-color: #ff6b6b;
+      color: #ffffff;
+    }
+    .box-bright-yellow {
+      background-color: #ffe66d;
+      color: #000000;
+    }
+    .box-bright-green {
+      background-color: #4ef037;
+      color: #000000;
+    }
+    .box-bright-blue {
+      background-color: #6ec1e4;
+      color: #000000;
+    }
+  </style>
+  
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
   <script>
@@ -137,21 +155,21 @@
         <!-- Right Column: Takeaways -->
         <div class="column is-half">
           <h2 class="title is-4 has-text-centered mb-4">Takeaways</h2>
-          
+           
           <!-- Takeaway Boxes -->
-          <div class="box-bright-red">
+          <div class="box box-bright-red">
             <p><strong>🚀🚀 </strong> We propose <span class="has-text-weight-bold">RaDeR</span>, a set of reasoning-based dense retrieval models trained with data derived from mathematical problem solving using retrieval-augmented reasoning trajectories of LLMs.</p>
           </div>
           
-          <div class="box-bright-yellow">
+          <div class="box box-bright-yellow">
             <p><strong> 🗂️ Data generation: </strong> Our method leverages Monte Carlo Tree Search 🌲 (MCTS)  for exploring the space of retrieval-augmented reasoning trajectories and self-reflective retrieval relevance evaluation 🤔 for enabling the creation of both diverse and hard-negative samples for reasoning retrieval training. </p>
           </div>
       
-          <div class="box-bright-purple">
+          <div class="box box-bright-purple">
             <p><strong>🌐 Generalization:</strong> RaDeR retrievers, trained for mathematical reasoning, effectively generalize to diverse reasoning tasks, achieving strong/state of the art performance on the 🔆 BRIGHT and 📚 RAR-B benchmarks. </p>
           </div>
           
-          <div class="box-bright-blue">
+          <div class="box box-bright-blue">
             <p><strong>🎯 Data Efficiency:</strong> RaDeR achieves superior performance while using only 2.5% of the training data used by the concurrent work REASONIR, highlighting the quality of our synthesized training data.</p>
           </div>
         
