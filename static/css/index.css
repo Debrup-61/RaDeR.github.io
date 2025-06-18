@@ -2,6 +2,31 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.box-bright-red {
+  background-color: #ff6b6b;  /* Bright red */
+  color: #ffffff;
+}
+
+.box-bright-yellow {
+  background-color: #ffe66d;  /* Bright yellow */
+  color: #000000;
+}
+
+.box-bright-green {
+  background-color: #4ef037;  /* Bright green */
+  color: #000000;
+}
+
+.box-bright-blue {
+  background-color: #6ec1e4;  /* Bright sky blue */
+  color: #000000;
+}
+
+.box-bright-purple {
+  background-color: #c084fc;  /* Bright lavender purple */
+  color: #000000;
+}
+
 
 .footer .icon-link {
     font-size: 25px;
@@ -156,28 +181,5 @@ body {
   border-radius: 5px;
 }
 
-.box-bright-red {
-  background-color: #ff6b6b;  /* Bright red */
-  color: #ffffff;
-}
 
-.box-bright-yellow {
-  background-color: #ffe66d;  /* Bright yellow */
-  color: #000000;
-}
-
-.box-bright-green {
-  background-color: #4ef037;  /* Bright green */
-  color: #000000;
-}
-
-.box-bright-blue {
-  background-color: #6ec1e4;  /* Bright sky blue */
-  color: #000000;
-}
-
-.box-bright-purple {
-  background-color: #c084fc;  /* Bright lavender purple */
-  color: #000000;
-}
 
