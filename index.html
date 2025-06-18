@@ -293,18 +293,24 @@ ing the quality of our synthesized training data.
       <div class="column is-four-fifths">
         <h2 class="title is-3">Motivation</h2>
         <!-- <div class="content has-text-justified"> -->
-        <img src="./static/images/pigeonhole_example.png" style="width: 450px; height: auto;">
-        <h2 class="subtitle has-text-centered">
-          The reasoning steps of LLMs
-may not align with those needed for retrieval. Solv-
-ing the question in this example requires retrieving
-the pigeonhole principle, where there are no match-
-ing terms between the question and the principle.
-The reasoning steps by GPT-4 also do not simplify
-the retrieval of the pigeonhole principle, since they
-outline the steps of applying the pigeonhole prin-
-ciple to solve the question.
-        </h2>
+        <figure class="image">
+          <img id="teaser" src="./static/images/pigeonhole_example.png"
+               style="
+                 display: block;
+                 margin-left: auto;
+                 margin-right: auto;
+                 width: 80%;
+                 max-width: 1000px;
+                 height: auto;
+                 border: 4px solid #3273dc;          /* Bulma primary color */
+                 border-radius: 12px;                /* Rounded corners */
+                 box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Soft shadow */
+               "
+               alt="Motivation">
+          <figcaption class="has-text-grey is-size-6 mt-3 has-text-weight-medium">
+            The reasoning steps of LLMs may not align with those needed for retrieval. Solving the question in this example requires retrieving the pigeonhole principle, where there are no matching terms between the question and the principle. The reasoning steps by GPT-4 also do not simplify the retrieval of the pigeonhole principle, since they outline the steps of applying the pigeonhole principle to solve the question. 
+          </figcaption>
+        </figure>
       </div>
       <!-- Motivation -->
     </div>
