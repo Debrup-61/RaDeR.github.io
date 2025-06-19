@@ -334,13 +334,13 @@ ing the quality of our synthesized training data.
                  width: 100%;
                  max-width: 1000px;
                  height: auto;
-                 border: 4px solid #4a4a4a;          /* Black*/
+                 border: 4px solid #dc143c;          /* Black*/
                  border-radius: 12px;                /* Rounded corners */
                  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Soft shadow */
                "
                alt="Motivation">
           <figcaption class="has-text-grey is-size-6 mt-3 has-text-weight-medium">
-            Example queries for a question from TheoremQA theorems BRIGHT
+            Example queries generated for a question from the <strong>MATH</strong> dataset. The Gold theorem is obtained from the MCTS. We incorporate two datasets for mathematical problem solving in <span class="has-text-weight-semibold">RaDeR</span>:  <strong><a href="https://arxiv.org/pdf/2103.03874" target="_blank" rel="noopener noreferrer">MATH (Hendrycks et al., 2021)</a></strong> and a subset of examples from  <strong><a href="http://faculty.bicmr.pku.edu.cn/~dongbin/Publications/numina_dataset.pdf" target="_blank" rel="noopener noreferrer">NuminaMath (Jia Li, 2024)</a></strong>.
           </figcaption>
         </figure>
       </div>
@@ -366,7 +366,64 @@ ing the quality of our synthesized training data.
     </div>
   </div>
 </section>
-  
+
+<!-- Results Carousel Section -->
+<section class="section has-background-light">
+  <div class="container is-max-desktop">
+    
+    <!-- Section Title -->
+    <h2 class="title is-3 has-text-centered mb-5">📊 Results of <span class="has-text-primary">RaDeR</span></h2>
+    
+    <!-- Carousel Container -->
+    <div class="box has-background-white px-5 py-5" style="border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <!-- Carousel Item 1 -->
+        <div class="item has-text-centered">
+          <img src="static/images/retrieval_GPT4_Cot.png" alt="Result 1" style="border-radius: 8px; border: 2px solid #3273dc;" />
+          <h2 class="subtitle mt-3 has-text-weight-semibold has-text-dark">
+            nDCG@10 Performance of RaDeR on the 🔆 BRIGHT dataset where the GPT CoT reasoning is used as the query for retrieval.
+          </h2>
+        </div>
+
+        <!-- Carousel Item 2 -->
+        <div class="item has-text-centered">
+          <img src="static/images/retrieval_question.png" alt="Result 2" style="border-radius: 8px; border: 2px solid #00d1b2;" />
+          <h2 class="subtitle mt-3 has-text-weight-semibold has-text-dark">
+            nDCG@10 Performance of RaDeR on the 🔆 BRIGHT dataset where the original question is used as the query for retrieval.
+          </h2>
+        </div>
+
+        <!-- Carousel Item 3 -->
+        <div class="item has-text-centered">
+          <img src="static/images/size_ablations.png" alt="Result 3" style="border-radius: 8px; border: 2px solid #ff3860;" />
+          <h2 class="subtitle mt-3 has-text-weight-semibold has-text-dark">
+            nDCG@10 performance of RaDeR on 🔆 BRIGHT when retrievers are trained using different sizes of Qwen-2.5-instruct models (3B, 7B, and 14B) on <em>MATH+NuminaMATH</em>. The original math question is used as the query. We observe that RaDeR retriever performance improves by scaling the size of the base LLM.  
+          </h2>
+        </div>
+
+        <!-- Carousel Item 4 -->
+        <div class="item has-text-centered">
+          <img src="static/images/rarb.png" alt="Result 4" style="border-radius: 8px; border: 2px solid #b86bff;" />
+          <h2 class="subtitle mt-3 has-text-weight-semibold has-text-dark">
+            nDCG@10 performance of RaDeR on 📚 RAR-B. RaDeR achieves performance comparable to the strongest open-source baseline, outperforming on the math split. Furthermore, it demonstrates performance that is comparable to or surpasses that of top-performing closed-source models. These results once again highlight the strong generalizability of RaDeR across diverse reasoning-based retrieval tasks.
+          </h2>
+        </div>
+
+        <!-- Carousel Item 5 -->
+        <div class="item has-text-centered">
+          <img src="static/images/reranking.png" alt="Result 5" style="border-radius: 8px; border: 2px solid #23d160;" />
+          <h2 class="subtitle mt-3 has-text-weight-semibold has-text-dark">
+            nDCG@10 performance of rerankers on 🔆 BRIGHT using questions as retrieval queries. The first-stage results are obtained by BM25 using GPT-4o CoT reasoning as queries. Results with ⋆ are taken from the BRIGHT paper.
+          </h2>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
