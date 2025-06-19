@@ -325,25 +325,40 @@ ing the quality of our synthesized training data.
       
       <!-- Left Column: Image -->
       <div class="column is-half has-text-centered">
-        <figure class="image is-4by3" style="border: 3px solid #4a4a4a; border-radius: 10px; padding: 10px;">
-          <img src="./static/images/queries.png" alt="Types of Queries Visualization" style="object-fit: contain;">
+        <figure class="image">
+          <img id="teaser" src="./static/images/queries.png"
+               style="
+                 display: block;
+                 margin-left: auto;
+                 margin-right: auto;
+                 width: 60%;
+                 max-width: 1000px;
+                 height: auto;
+                 border: 4px solid #4a4a4a;          /* Black*/
+                 border-radius: 12px;                /* Rounded corners */
+                 box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Soft shadow */
+               "
+               alt="Motivation">
+          <figcaption class="has-text-grey is-size-6 mt-3 has-text-weight-medium">
+            The reasoning steps of LLMs may not align with those needed for retrieval. Solving the question in this example requires retrieving the pigeonhole principle, where there are no matching terms between the question and the principle. The reasoning steps by GPT-4 also do not simplify the retrieval of the pigeonhole principle, since they outline the steps to solve the question. 
+          </figcaption>
         </figure>
       </div>
 
       <!-- Right Column: Query Cards -->
       <div class="column is-half">
         <div class="box has-background-white mb-4" style="border-left: 4px solid #00d1b2;">
-          <p class="has-text-weight-semibold mb-1">❔ MCTS CoT Reasoning Query</p>
+          <p class="has-text-weight-semibold mb-1">❓ MCTS CoT Reasoning Query</p>
           <p class="is-size-6">We use the CoT reasoning steps (partial solution) up to the query node directly from the MCTS as the query. </p>
         </div>
 
         <div class="box has-background-white mb-4" style="border-left: 4px solid #ffdd57;">
-          <p class="has-text-weight-semibold mb-1">❔ LLM Reasoning Query</p>
+          <p class="has-text-weight-semibold mb-1">❓ LLM Reasoning Query</p>
           <p class="is-size-6">We prompt a LLM to generate a reasoning query based on the math question M , the reasoning steps up to the query node (partial solution), and the theorem node from MCTS.</p>
         </div>
 
         <div class="box has-background-white" style="border-left: 4px solid #b86bff;">
-          <p class="has-text-weight-semibold mb-1">❔ Lexical Query</p>
+          <p class="has-text-weight-semibold mb-1">❓ Lexical Query</p>
           <p class="is-size-6">We generate queries that have high term similarity with their respective relevant theorems, by prompting a LLM using only the theorem node from the MCTS.</p>
         </div>
       </div>
