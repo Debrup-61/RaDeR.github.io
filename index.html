@@ -368,54 +368,50 @@ ing the quality of our synthesized training data.
 </section>
 
 <!-- Results Carousel Section -->
-<section class="section has-background-light">
-  <div class="container is-max-desktop">
-    
-    <!-- Section Title -->
-    <h2 class="title is-3 has-text-centered mb-5">📊 Results of <span class="has-text-primary">RaDeR</span></h2>
-    
-    <!-- Carousel Container -->
-    <div class="box has-background-white px-5 py-5" style="border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Section Title -->
+      <h2 class="title is-3 has-text-centered mb-5">📊 Results of <span class="has-text-primary">RaDeR</span></h2>
       <div id="results-carousel" class="carousel results-carousel">
 
         <!-- Carousel Item 1 -->
-        <div class="item has-text-centered">
-          <img src="static/images/retrieval_GPT4_Cot.png" alt="Result 1" style="border-radius: 8px; border: 2px solid #3273dc;" />
-          <h2 class="subtitle mt-3 has-text-weight-semibold has-text-dark">
-            nDCG@10 Performance of RaDeR on the 🔆 BRIGHT dataset where the GPT CoT reasoning is used as the query for retrieval.
+        <div class="item">
+          <img src="static/images/retrieval_GPT4_Cot.png" alt="GPT CoT Retrieval" style="border-radius: 8px; border: 2px solid #3273dc;" />
+          <h2 class="subtitle mt-3 has-text-centered has-text-weight-semibold has-text-dark">
+            🔹 nDCG@10 on 🔆 BRIGHT using GPT CoT reasoning as the query.
           </h2>
         </div>
 
         <!-- Carousel Item 2 -->
-        <div class="item has-text-centered">
-          <img src="static/images/retrieval_question.png" alt="Result 2" style="border-radius: 8px; border: 2px solid #00d1b2;" />
-          <h2 class="subtitle mt-3 has-text-weight-semibold has-text-dark">
-            nDCG@10 Performance of RaDeR on the 🔆 BRIGHT dataset where the original question is used as the query for retrieval.
+        <div class="item">
+          <img src="static/images/retrieval_question.png" alt="Question Retrieval" style="border-radius: 8px; border: 2px solid #00d1b2;" />
+          <h2 class="subtitle mt-3 has-text-centered has-text-weight-semibold has-text-dark">
+            🔹 nDCG@10 on 🔆 BRIGHT using original question as retrieval query.
           </h2>
         </div>
 
         <!-- Carousel Item 3 -->
-        <div class="item has-text-centered">
-          <img src="static/images/size_ablations.png" alt="Result 3" style="border-radius: 8px; border: 2px solid #ff3860;" />
-          <h2 class="subtitle mt-3 has-text-weight-semibold has-text-dark">
-            nDCG@10 performance of RaDeR on 🔆 BRIGHT when retrievers are trained using different sizes of Qwen-2.5-instruct models (3B, 7B, and 14B) on <em>MATH+NuminaMATH</em>. The original math question is used as the query. We observe that RaDeR retriever performance improves by scaling the size of the base LLM.  
+        <div class="item">
+          <img src="static/images/size_ablations.png" alt="Size Ablations" style="border-radius: 8px; border: 2px solid #ff3860;" />
+          <h2 class="subtitle mt-3 has-text-centered has-text-weight-semibold has-text-dark">
+            🔺 Performance scaling with model size (3B → 7B → 14B) on <em>MATH + NuminaMath</em>.
           </h2>
         </div>
 
         <!-- Carousel Item 4 -->
-        <div class="item has-text-centered">
-          <img src="static/images/rarb.png" alt="Result 4" style="border-radius: 8px; border: 2px solid #b86bff;" />
-          <h2 class="subtitle mt-3 has-text-weight-semibold has-text-dark">
-            nDCG@10 performance of RaDeR on 📚 RAR-B. RaDeR achieves performance comparable to the strongest open-source baseline, outperforming on the math split. Furthermore, it demonstrates performance that is comparable to or surpasses that of top-performing closed-source models. These results once again highlight the strong generalizability of RaDeR across diverse reasoning-based retrieval tasks.
+        <div class="item">
+          <img src="static/images/rarb.png" alt="RAR-B Results" style="border-radius: 8px; border: 2px solid #b86bff;" />
+          <h2 class="subtitle mt-3 has-text-centered has-text-weight-semibold has-text-dark">
+            🔹 nDCG@10 on 📚 RAR-B benchmark: RaDeR matches or surpasses top open/closed-source baselines. This shows strong generalizability of RaDeR across diverse reasoning-based retrieval tasks. 
           </h2>
         </div>
 
         <!-- Carousel Item 5 -->
-        <div class="item has-text-centered">
-          <img src="static/images/reranking.png" alt="Result 5" style="border-radius: 8px; border: 2px solid #23d160;" />
-          <h2 class="subtitle mt-3 has-text-weight-semibold has-text-dark">
-            nDCG@10 performance of rerankers on 🔆 BRIGHT using questions as retrieval queries. The first-stage results are obtained by BM25 using GPT-4o CoT reasoning as queries. Results with ⋆ are taken from the BRIGHT paper.
+        <div class="item">
+          <img src="static/images/reranking.png" alt="Re-ranking" style="border-radius: 8px; border: 2px solid #23d160;" />
+          <h2 class="subtitle mt-3 has-text-centered has-text-weight-semibold has-text-dark">
+            🎯 Reranker results on 🔆 BRIGHT using GPT-4o CoT queries. ⋆ denotes numbers from the BRIGHT paper.
           </h2>
         </div>
 
@@ -423,6 +419,7 @@ ing the quality of our synthesized training data.
     </div>
   </div>
 </section>
+
 
 
 <section class="section" id="BibTeX">
