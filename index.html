@@ -144,32 +144,6 @@
 </section>
 
 
-
-
-  
-  
-<section class="section">
-  
- <div class="container is-max-desktop">
-    <div class="hero-body"> 
-      <div class="columns is-centered has-text-centered">
-        <figure class="image">
-          <img src="./static/images/RaDeR_visualization.png" 
-               alt="RaDeR comparison vs Other methods"
-               style="width: 100%; height: auto;>
-        </figure>
-        
-        <h2 class="subtitle has-text-centered">
-          <span class="dnerf">RaDeR</span> are a set of reasoning-based dense retrieval models trained with data derived from mathematical problem solving LLMs.
-        </h2>      
-      </div>
-    </div>
-  </div>          
-          
-
-</section>
-
-  
 <!-- News Section: RaDeR Releases -->
 <section class="section has-background-white-bis py-6">
   <div class="container is-max-desktop">
@@ -213,6 +187,32 @@
   </div>
 </section>
   
+
+  
+  
+<section class="section">
+  
+ <div class="container is-max-desktop">
+    <div class="hero-body"> 
+      <div class="columns is-centered has-text-centered">
+        <figure class="image">
+          <img src="./static/images/RaDeR_visualization.png" 
+               alt="RaDeR comparison vs Other methods"
+               style="width: 100%; height: auto;>
+        </figure>
+        
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">RaDeR</span> are a set of reasoning-based dense retrieval models trained with data derived from mathematical problem solving LLMs.
+        </h2>      
+      </div>
+    </div>
+  </div>          
+          
+
+</section>
+
+  
+
   
 <!-- Section 1: Takeaways Grid -->
 <section class="section hero is-light">
@@ -530,51 +530,67 @@ ing the quality of our synthesized training data.
   </div>
 </section>
 
-<!-- Section: RaDeR Success EXAMPLE-->
-<section class="section has-background-white-ter py-6">
+<!-- Section: RaDeR Success EXAMPLE with Orange Theme -->
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-vcentered">
+    <div class="columns is-vcentered is-variable is-6">
+      
+      <!-- Image -->
       <div class="column is-half">
-        <figure class="image is-4by3">
+        <figure class="image">
           <img src="static/images/success.png" alt="Success example"
-               style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 3px solid #00c4a7;" />
+               style="border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.1); border: 4px solid #ffb300;" />
         </figure>
       </div>
+      
+      <!-- Text Box -->
       <div class="column is-half">
-        <h3 class="title is-4 has-text-primary">🔍 Success Example RaDeR vs other retrievers</h3>
-        <p class="is-size-5">
-         🚀 RaDeR successfully performs nuanced reasoning to successfully retrieve the gold theorem, whereas a strong baseline, Qwen2, fails to do so. 
-        </p>
+        <div class="box has-background-white p-5" style="border-left: 5px solid #ffb300; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+          <h3 class="title is-4 has-text-warning-dark">🔍 Success Example: RaDeR vs Other Retrievers</h3>
+          <p class="is-size-5 has-text-grey-dark">
+            🚀 <strong>RaDeR</strong> successfully performs nuanced reasoning to accurately retrieve the <em>gold theorem</em>, 
+            while a strong baseline (<strong>Qwen2</strong>) fails to do so. This illustrates RaDeR's ability to bridge gaps 
+            between reasoning depth and retrieval performance.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Section: RaDeR code example (Clean + Stylish Box) -->
+<section class="section has-background-light py-6">
+  <div class="container is-max-desktop">
+    <div class="box has-background-white p-5" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); border-left: 5px solid #3273dc;">
+      <div class="columns is-vcentered is-reverse-columns is-variable is-6">
+
+        <!-- Text Content -->
+        <div class="column is-half">
+          <h3 class="title is-4 has-text-link">🧠 Performance on Coding Splits</h3>
+          <p class="is-size-5 has-text-grey-dark">
+            🚀 <strong>RaDeR</strong> achieves the best performance on <strong>LeetCode</strong>, surpassing strong baselines by 8 points in the <em>query=question</em> setting.
+            Results on <strong>Pony</strong> in the <em>CoT reasoning</em> setting also show notable improvements. These results are especially significant as they demonstrate that training our retrievers for <strong>mathematical reasoning</strong> yields substantial improvements in code retrieval—despite no code-specific training data.
+          </p>
+          <p class="mt-3 has-text-grey-dark">
+            ✨ We present a qualitative example from LeetCode below. Our analysis shows that most coding problems hinge on solving underlying <em>mathematical subproblems</em>. We believe RaDeR’s ability to identify this structure drives its effectiveness in code retrieval.
+          </p>
+        </div>
+
+        <!-- Image -->
+        <div class="column is-half">
+          <figure class="image">
+            <img src="static/images/leetcode.png" alt="RaDeR code example"
+                 style="border-radius: 10px; border: 3px solid #3273dc; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);" />
+          </figure>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section: RaDeR code example -->
-<section class="section has-background-primary-light py-6">
-  <div class="container is-max-desktop">
-    <div class="box has-background-white p-5" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
-      <div class="columns is-vcentered is-reverse-columns">
-        <div class="column is-half">
-          <h3 class="title is-4 has-text-link">Performance on Coding splits </h3>
-          <p class="is-size-5">
-           🚀 RaDeR achieves the best performance on LeetCode, surpassing the strong baselines by 8 points in the query=question setting.
-Results on Pony in the CoT reasoning setting, also show improvements of RaDeR over the strongest baseline. These results are particularly significant, as they demonstrate that training our retrievers for mathematical reasoning yields substantial improvements in code retrieval, despite not having any code-specific training data. 
-          </p>
-          <p class="mt-3">
-            ✨ We present a qualitative example from Leetcode below. Our qualitative analysis reveals that in most cases, coding problems rely on solving underlying mathematical subproblems. We believe that the ability to recognize this mathematical substructure enables RaDeR models to enhance retrieval effectiveness on these coding splits.
-          </p>
-        </div>
-        <div class="column is-half">
-          <figure class="image is-16by9">
-            <img src="static/images/leetcode.png" alt="RaDeR code example"
-                 style="border-radius: 10px; border: 3px solid #3273dc;" />
-          </figure>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Paper -->
 <section class="hero is-small is-light">
