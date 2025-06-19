@@ -375,7 +375,7 @@ ing the quality of our synthesized training data.
     <h2 class="title is-3 has-text-centered mb-5">📊 Results of <span class="has-text-primary">RaDeR</span></h2>
 
     <!-- Carousel -->
-    <div id="results-carousel" class="carousel results-carousel" style="max-width: 900px; margin: 0 auto;">
+    <div id="results-carousel" class="carousel results-carousel" style="max-width: 1500px; margin: 0 auto;">
 
       <!-- Carousel Item 1 -->
       <div class="item has-text-centered">
@@ -476,5 +476,17 @@ ing the quality of our synthesized training data.
   </div>
 </footer>
 
+<script>
+  bulmaCarousel.attach('#results-carousel', {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    loop: true,
+    autoplay: true,
+    pauseOnHover: true,
+    navigation: true,
+    pagination: true,
+  });
+</script>
+  
 </body>
 </html>
